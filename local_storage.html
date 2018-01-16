@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Counter</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		if (!localStorage.getItem('counter')){
+			localStorage.setItem('counter', 0);
+		}
+		document.write(localStorage.getItem('counter'));
+		localStorage.setItem('counter', parseInt(localStorage.getItem('counter')) + 1);
+		
+	</script>
+	
+</body>
+</html>

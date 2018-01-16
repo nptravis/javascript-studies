@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="https://code.jquery.com/jquery-latest.min.js"></script>
+	<script type="text/javascript">
+		
+		// with jquery
+		$(document).ready(function() {
+			$('#demo').submit(function(event) {
+				alert('Hello, ' + $('#name').val() + '!');
+				event.preventDefault();
+			});
+		});	
+
+		// with vanilla javascript
+		// window.onload = function() {
+		// 	document.getElementById('demo').onsubmit = function(){
+		// 		alert('Hello, ' + document.getElementById('name').value + '!'):
+		// 		return false;
+		// 	};
+		// };
+
+
+	</script>
+
+	<title>Dom0</title>
+</head>
+<body>
+<!-- the false statement here tells the input to not be submitted to a server -->
+	<form id="demo">
+		<input id="name" placeholder="Name" type="text"/>
+		<input type="submit"/>
+	</form>
+
+</body>
+</html>

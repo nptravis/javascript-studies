@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript">
+
+		function greet()
+		{
+			alert('Hello, ' + document.getElementById('name').value);
+		}
+
+	</script>
+	<title>Dom0</title>
+</head>
+<body>
+<!-- the false statement here tells the input to not be submitted to a server -->
+	<form id="demo" onsubmit="greet(); return false;">
+		<input id="name" placeholder="Name" type="text"/>
+		<input type="submit"/>
+	</form>
+
+</body>
+</html>

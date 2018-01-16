@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Places</title>
+</head>
+<body>
+	<ul>
+		{% for i in data %}
+		<li><p>{{ i[2] }}, {{ i[4] }} {{ i[1] }}</p></li>
+		{% endfor %}
+	</ul>
+	
+</body>
+</html>
+
+<!-- (u'US', u'05472', u'New Haven', u'Vermont', u'VT', u'Addison', u'001', u'', u'', 44.1126, -73.1735, 4) -->

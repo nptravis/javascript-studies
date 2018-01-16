@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom0</title>
+</head>
+<body>
+<!-- the false statement here tells the input to not be submitted to a server -->
+	<form id="demo">
+		<input id="name" placeholder="Name" type="text"/>
+		<input type="submit"/>
+	</form>
+	<script type="text/javascript">
+		// this is an example of an anonymous function
+		document.getElementById('demo').onsubmit = function(){
+			alert('Hello, ' + document.getElementById('name').value);
+		};
+
+	</script>
+
+</body>
+</html>

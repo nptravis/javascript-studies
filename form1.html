@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>form1</title>
+</head>
+<body>
+	<form action="/register" id="registration" method="get">
+		<input type="text" name="email" placeholder="Email"/>
+		<input type="password" name="password" placeholder="Password">
+		<input type="password" name="confirmation" placeholder="Password (again)">
+		<input type="checkbox" name="agreement"> I agree
+		<input type="submit" value="Register">
+	</form>
+	<script type="text/javascript">
+		
+		var form = document.getElementById('registration');
+		form.onsubmit = function(){
+			if (form.email.value == ''){
+				alert('missing email');
+				return false;
+			}
+			else if (form.password.value == ''){
+				alert('missing password');
+				return false;
+			}
+			else if (form.password.value != form.confirmation.value){
+				alert('passwords don\'t match');
+				return false;
+			}
+			else if (!form.agreement.checked){
+				alert('checkbox unchecked');
+				return false;
+			}
+			return true;
+		};
+
+		// in jquery
+		// $(document).ready(function() {
+		// 	$('#registration').submit(function(){
+				
+		// 	if ($('#registration input[name=email]').val() == '') {
+		// 		alert('missing email');
+		// 		return false;
+		// 	}
+		// 	else if ($('#registration input[name=password]').val() == ''){
+		// 		alert('missing password');
+		// 		return false;
+		// 	}
+		// 	else if ($('#registration input[name=password]').val() != $('#registration input[name=confirmation]').val()){
+		// 		alert('passwords don\'t match');
+		// 		return false;
+		// 	}
+		// 	else if ($('#registration input[name=agreement]').val() == false) {
+		// 		alert('checkbox unchecked');
+		// 		return false;
+		// 	}
+		// 	return true;
+		
+		// 	})
+		// })
+
+	</script>
+	
+</body>
+</html>

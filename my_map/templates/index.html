@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <script>"https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"</script>
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="../static/styles.css" rel="stylesheet"/>
+    <title>My Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    {{ JSGlue.include() }}
+    <script src="../static/scripts.js" defer></script>
+
+  </head>
+
+<body>
+  <div class="container-fluid">
+    <div id="map"></div>
+      <form method="post" id="form">
+        <div class="form-group">
+           <label class="sr-only" for="q">City, State, Postal Code</label>
+          <input class="form-control form-control-sm" name="n" id="q" placeholder="City, State, Zipcode" required type="text">
+        </div>
+      </form>
+  </div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu6yeuab4BDk1W933tY-h2ZzemMk3_ZuU&callback=initMap" async defer></script>
+</body>
+</html>
